@@ -30,3 +30,7 @@ button {
   border: 0;
   padding-inline: .5rem;
 }
+
+.warning {
+  color: red;
+}
