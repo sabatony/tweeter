@@ -1,0 +1,19 @@
+@media only screen and (min-width: 1024px) {
+  .profile {
+    width: 33.3%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px;
+    margin-top: 20px ;
+  }
+
+  .container {
+    width: 60%;
+    float: right;
+    margin-right: 20px;
+  }
+
+
+}
