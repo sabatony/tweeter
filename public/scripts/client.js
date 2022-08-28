@@ -75,6 +75,7 @@ $(document).ready(function(){
   
 $('form').submit(function(event) {
   event.preventDefault();
+ 
   const tweetData = event.target[0].value
   
   if(tweetData.length > 140) {
@@ -102,8 +103,8 @@ $('form').submit(function(event) {
     data: $(this).serialize()
 
   }).then(() => {
-    $('#tweets-container').empty();
     loadTweets();
+    $('form').trigger('reset');
   })
  })
 });
