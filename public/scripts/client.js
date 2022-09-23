@@ -56,7 +56,7 @@ $(document).ready(function(){
    const loadTweets = function () {
   $.ajax({
     method: 'GET',
-    url: 'http://localhost:8080/tweets',
+    url: '/tweets',
   })
   .then(function(tweet) {
     renderTweets(tweet)
@@ -67,6 +67,7 @@ $(document).ready(function(){
   loadTweets();
 
   const renderTweets = function (tweets) {
+     $('#tweets-container').empty();
     for(const tweet of tweets) {
       const tweetElement = createTweetElement(tweet);
       $('#tweets-container').prepend(tweetElement);
@@ -99,7 +100,7 @@ $('form').submit(function(event) {
   
   $.ajax({
     method: 'POST',
-    url: 'http://localhost:8080/tweets',
+    url: '/tweets',
     data: $(this).serialize()
 
   }).then(() => {

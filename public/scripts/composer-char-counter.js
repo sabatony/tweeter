@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $('#tweet-text').keyup(function() {
+  $('#tweet-text').on('input',function() {
     let charCount = $(this).val().length
     const maxChars = 140;
     const remaining = maxChars - charCount;
